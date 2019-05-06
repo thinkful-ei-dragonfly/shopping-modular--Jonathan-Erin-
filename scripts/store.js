@@ -10,8 +10,8 @@ const store = (function(){ //eslint-disable-line no-unused-vars
   ];
   let hideCheckedItems = false;
   let searchTerm = '';
-  const findById = function(id){ //eslint-disable-line no-unused-vars
-    store.items.find(item => item.id === id);
+  let findById = function(id){ //eslint-disable-line no-unused-vars
+    return store.items.find(item => item.id === id); 
   };
   
   const addItem = function (name){ //eslint-disable-line no-unused-vars
@@ -25,7 +25,7 @@ const store = (function(){ //eslint-disable-line no-unused-vars
   };
 
   const findAndToggleChecked = function(id){ //eslint-disable-line no-unused-vars
-    let item = this.findById(id);
+    const item = this.findById(id);
     item.checked = !item.checked;
   };
 
