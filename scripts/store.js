@@ -1,7 +1,7 @@
 'use strict';
-/* global cuid $ store $*/
-// eslint-disable-line 
-const store = (function(){
+/* global store cuid */ //eslint-disable-line no-unused-vars
+
+const store = (function(){ //eslint-disable-line no-unused-vars
   const items = [
     { id: cuid(), name: 'apples', checked: false },
     { id: cuid(), name: 'oranges', checked: false },

@@ -1,6 +1,6 @@
 'use strict';
-
-const Item = (function(){
+/* global cuid */
+const Item = (function(){ //eslint-disable-line no-unused-vars
 
   const validateName = function(name) {
     if (name === '') {
