@@ -46,6 +46,14 @@ const store = (function(){ //eslint-disable-line no-unused-vars
     store.items.splice(itemIndex, 1);
   };
 
+  const toggleCheckedFilter = function() {
+    store.hideCheckedItems = !store.hideCheckedItems;
+  };
+
+  const setSearchTerm = function(val) {
+    store.searchTerm = val;
+  };
+
 
   return {items,
     hideCheckedItems,
@@ -55,5 +63,7 @@ const store = (function(){ //eslint-disable-line no-unused-vars
     findAndToggleChecked,
     findAndUpdateName,
     findAndDelete,
+    toggleCheckedFilter,
+    setSearchTerm,
   };
 }());
