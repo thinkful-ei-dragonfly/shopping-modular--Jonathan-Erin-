@@ -34,7 +34,7 @@ const store = (function(){ //eslint-disable-line no-unused-vars
     try{
       Item.validateName(newName);
       let item = this.findById(id);
-      item.name = item.newName;
+      item.name = newName;
     }
     catch(error){
       console.log('Cannot update item {error.message');
