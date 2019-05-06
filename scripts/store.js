@@ -1,6 +1,6 @@
 'use strict';
-/* global ignoreThisVar, store */
-// esling-disable-line 
+/* global cuid $ store $*/
+// eslint-disable-line 
 const store = (function(){
   const items = [
     { id: cuid(), name: 'apples', checked: false },
