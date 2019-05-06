@@ -11,8 +11,8 @@ const store = (function(){ //eslint-disable-line no-unused-vars
   let hideCheckedItems = false;
   let searchTerm = '';
 
-  const findById = function(id){ //eslint-disable-line no-unused-vars
-    store.items.find(item => item.id === id);
+  let findById = function(id){ //eslint-disable-line no-unused-vars
+    return store.items.find(item => item.id === id); 
   };
   
   const addItem = function (name){ //eslint-disable-line no-unused-vars
@@ -26,8 +26,8 @@ const store = (function(){ //eslint-disable-line no-unused-vars
   };
 
   const findAndToggleChecked = function(id){ //eslint-disable-line no-unused-vars
-    let foundItem = findById(id);
-    foundItem.checked = !foundItem.checked;
+    const item = this.findById(id);
+    item.checked = !item.checked;
   };
 
   const findAndUpdateName = function(id, newName){ //eslint-disable-line no-unused-vars
